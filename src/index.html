@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chartjs</title>
+
+    <link rel="stylesheet" href="css/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <div class="container mx-auto ">
+        <!-- Search -->
+        <div class="w-full flex justify-center items-center flex-col md:flex-row px-4">
+            <input id="customer-filter" class="w-full input-style" type="text" placeholder="Enter your name">
+            <input id="amount-filter" class="w-full input-style" type="text" placeholder="Enter your amount">
+        </div>
+        
+        <p id="no-data-text" class="font-black text-center text-4xl italic  hidden">There is No data</p>
+        <!-- Table -->
+        <div class="px-6">
+            <table class="table-auto w-full">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2  border border-black bg-[#152C5BCF] text-white font-semibold">Customer</th>
+                        <th class="px-4 py-2  border border-black bg-[#152C5BCF] text-white font-semibold">Transactions Amount</th>
+                        <th class="px-4 py-2  border border-black bg-[#152C5BCF] text-white font-semibold">Transactions per day</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody">
+                    
+                </tbody>
+           </table>
+        </div>
+        <!-- graph -->
+        <div class="max-w-[500px] p-4 mx-auto">
+            <canvas class="m-auto w-full" id="transaction-chart"></canvas>
+        </div>
+    </div>
+    
+    
+
+    <script src="js/index.js"></script>
+</body>
+</html>
